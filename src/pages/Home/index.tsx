@@ -1,7 +1,12 @@
+import { Intro } from './components/Intro'
+import { OurCoffees } from './components/OurCoffees'
+import * as S from './styles'
+
 export function HomePage() {
   return (
-    <div>
-      <p>Home</p>
-    </div>
+    <S.HomeContainer>
+      <Intro />
+      <OurCoffees />
+    </S.HomeContainer>
   )
 }

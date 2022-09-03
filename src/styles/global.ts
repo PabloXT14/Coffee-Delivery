@@ -11,6 +11,20 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
   }
 
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: ${({ theme }) => theme.colors['base-hover']};
+  }
+
   body {
     background: ${(props) => props.theme.colors['base-background']};
     color: ${(props) => props.theme.colors['base-text']};
