@@ -5,4 +5,12 @@ export const OurCoffeeContainer = styled.section`
   margin-top: 2rem;
 `
 
-export const CoffeeList = styled.div``
+export const CoffeeList = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+  /* place-content: center; */
+  margin-top: 3.5rem;
+`

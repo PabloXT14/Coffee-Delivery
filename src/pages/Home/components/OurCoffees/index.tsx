@@ -10,6 +10,10 @@ export function OurCoffees() {
       </TitleText>
       <S.CoffeeList>
         <CoffeeCard />
+        <CoffeeCard />
+        <CoffeeCard />
+        <CoffeeCard />
+        <CoffeeCard />
       </S.CoffeeList>
     </S.OurCoffeeContainer>
   )
