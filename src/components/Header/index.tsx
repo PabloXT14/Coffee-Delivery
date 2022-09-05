@@ -4,8 +4,8 @@ import * as S from './styles'
 
 export function Header() {
   return (
-    <S.HeaderContainer className="container">
-      <div>
+    <S.HeaderContainer>
+      <div className="container">
         <img src={coffeeDeliveryLogo} alt="" />
         <S.HeaderButtonsContainer>
           <S.HeaderButton variant="purple">
