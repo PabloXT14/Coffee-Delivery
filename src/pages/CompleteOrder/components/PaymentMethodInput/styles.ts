@@ -19,6 +19,7 @@ export const PaymentMethodInputContainer = styled.div`
 `
 
 export const ContentContainer = styled.div`
+  cursor: pointer;
   padding: 0 1rem;
   background: ${({ theme }) => theme.colors['base-button']};
   color: ${({ theme }) => theme.colors['base-text']};

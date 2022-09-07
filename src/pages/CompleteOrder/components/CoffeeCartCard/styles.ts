@@ -22,7 +22,7 @@ export const CoffeeCartCardContainer = styled.div`
   }
 
   & > p {
-    align-items: flex-start;
+    align-self: flex-start;
     font-weight: 700;
   }
 `
@@ -42,4 +42,24 @@ export const ActionsContainer = styled.div`
 
 export const RemoveButton = styled.button.attrs({
   type: 'button',
-})``
+})`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: ${({ theme }) => theme.colors['base-text']};
+  font-size: 0.75rem;
+  height: 100%;
+  border: none;
+  background: ${({ theme }) => theme.colors['base-button']};
+  padding: 0 0.5rem;
+  border-radius: 6px;
+  transition: 0.4s;
+
+  svg {
+    color: ${({ theme }) => theme.colors['brand-purple']};
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.colors['base-hover']};
+  }
+`

@@ -1,5 +1,6 @@
 import { TitleText } from '../../../../components/Typography'
 import { CoffeeCartCard } from '../CoffeeCartCard'
+import { ConfirmationSection } from './ConfirmationSection'
 import * as S from './styles'
 
 export function SelectedCoffees() {
@@ -13,6 +14,8 @@ export function SelectedCoffees() {
         <CoffeeCartCard />
         <CoffeeCartCard />
         <CoffeeCartCard />
+
+        <ConfirmationSection />
       </S.DetailsContainer>
     </S.SelectedCoffeesContainer>
   )

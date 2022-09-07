@@ -35,7 +35,7 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   ${({ size }) =>
     size === 'small' &&
     css`
-      padding: 0.3rem;
+      padding: 0.3rem 0.5rem;
     `}
 `
 
