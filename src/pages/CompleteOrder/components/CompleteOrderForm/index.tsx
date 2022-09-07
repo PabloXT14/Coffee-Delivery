@@ -3,6 +3,7 @@ import { useTheme } from 'styled-components'
 import { TitleText } from '../../../../components/Typography'
 import { SectionTitle } from '../SectionTitle'
 import { AddressForm } from './AddressForm'
+import { PaymentMethodsOptions } from './PaymentMethodOptions'
 import * as S from './styles'
 
 export function CompleteOrderForm() {
@@ -29,7 +30,7 @@ export function CompleteOrderForm() {
           subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
           icon={<CurrencyDollar size={22} color={colors['brand-purple']} />}
         />
-        {/* <AddressForm /> */}
+        <PaymentMethodsOptions />
       </S.FormSectionContainer>
     </S.CompleteOrderFormContainer>
   )
