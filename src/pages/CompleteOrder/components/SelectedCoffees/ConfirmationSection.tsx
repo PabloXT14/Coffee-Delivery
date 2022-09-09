@@ -1,28 +1,36 @@
 import { Button } from '../../../../components/Button'
 import { RegularText } from '../../../../components/Typography'
+import { useCart } from '../../../../hooks/useCart'
 import { formatMoney } from '../../../../utils/formatMoney'
 import * as S from './styles'
 
 export function ConfirmationSection() {
+  const { cartItemsTotal, cartQuantity, deliveryPrice } = useCart()
+  const cartTotal = deliveryPrice + cartItemsTotal
+
+  const formattedItemsTotal = formatMoney(cartItemsTotal)
+  const formattedDeliveryPrice = formatMoney(deliveryPrice)
+  const formattedCartTotal = formatMoney(cartTotal)
+
   return (
     <S.ConfirmationSectionContainer>
       <div>
         <RegularText size="s">Total de itens</RegularText>
-        <RegularText>R$ {formatMoney(29.7)}</RegularText>
+        <RegularText>R$ {formattedItemsTotal}</RegularText>
       </div>
       <div>
         <RegularText size="s">Entrega</RegularText>
-        <RegularText>R$ {formatMoney(3.5)}</RegularText>
+        <RegularText>R$ {formattedDeliveryPrice}</RegularText>
       </div>
       <div>
         <RegularText size="l" weight="700" color="subtitle">
           Total
         </RegularText>
         <RegularText size="l" weight="700" color="subtitle">
-          R$ {formatMoney(33.2)}
+          R$ {formattedCartTotal}
         </RegularText>
       </div>
-      <Button text="Confirmar Pedido" />
+      <Button text="Confirmar Pedido" disabled={cartQuantity <= 0} />
     </S.ConfirmationSectionContainer>
   )
 }
