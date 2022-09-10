@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
+import { createContext, ReactNode, useEffect, useState } from 'react'
 import { Coffee } from '../pages/Home/components/CoffeeCard'
 import { produce } from 'immer'
 
@@ -22,6 +16,7 @@ interface CartContextType {
     type: 'increase' | 'decrease',
   ) => void
   removeCartItem: (cartItemId: string) => void
+  cleanCart: () => void
   cartItemsTotal: number
   deliveryPrice: number
 }
@@ -103,6 +98,10 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     setCartItems(newCart)
   }
 
+  function cleanCart() {
+    setCartItems([])
+  }
+
   useEffect(() => {
     localStorage.setItem(COFFEE_ITEMS_STORAGE_KEY, JSON.stringify(cartItems))
   }, [cartItems])
@@ -115,6 +114,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartQuantity,
         changeCartItemQuantity,
         removeCartItem,
+        cleanCart,
         cartItemsTotal,
         deliveryPrice,
       }}

@@ -4,9 +4,30 @@ import { MapPin, Clock, CurrencyDollar } from 'phosphor-react'
 import * as S from './styles'
 import { InfoWithIcon } from '../../components/InfoWithIcon'
 import { useTheme } from 'styled-components'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { OrderData } from '../CompleteOrder'
+import { PAYMENT_METHODS } from '../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions'
+import { useEffect } from 'react'
+
+interface LocationType {
+  state: OrderData
+}
 
 export function OrderConfirmed() {
   const { colors } = useTheme()
+
+  // Pegando dados do state do navigate (que vem da rota complete-order)
+  const { state } = useLocation() as unknown as LocationType
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!state) {
+      navigate('/')
+    }
+  }, [navigate, state])
+
+  if (!state) return <></>
 
   return (
     <S.OrderConfirmedContainer className="container">
@@ -24,9 +45,12 @@ export function OrderConfirmed() {
             iconBg={colors['brand-purple']}
             text={
               <RegularText color="text">
-                Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                Entrega em{' '}
+                <strong>
+                  {state.street}, {state.number}
+                </strong>
                 <br />
-                Farrapos - Porto Alegre, RS
+                {state.district} - {state.city}, {state.uf}
               </RegularText>
             }
           />
@@ -50,7 +74,7 @@ export function OrderConfirmed() {
               <RegularText color="text">
                 Pagamento na entrega
                 <br />
-                <strong>Cartão de crédito</strong>
+                <strong>{PAYMENT_METHODS[state.paymentMethod].label}</strong>
               </RegularText>
             }
           />
