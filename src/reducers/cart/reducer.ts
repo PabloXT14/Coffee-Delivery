@@ -6,26 +6,28 @@ export interface CartItem extends Coffee {
   quantity: number
 }
 
-interface CartItemsState {
+interface CartState {
   cartItems: CartItem[]
 }
 
-export function cartItemsReducer(state: CartItemsState, action: any) {
+export function cartReducer(state: CartState, action: any) {
   switch (action.type) {
     case ActionTypes.ADD_COFFEE_TO_CART: {
       const coffeeAlreadyExistsInCart = state.cartItems.findIndex(
         (cartItem) => cartItem.id === action.payload.newCoffee.id,
       )
 
-      const newCartItemsState = produce(state, (draft) => {
+      const newCartState = produce(state, (draft) => {
         if (coffeeAlreadyExistsInCart < 0) {
           draft.cartItems.push(action.payload.newCoffee)
         } else {
-          draft.cartItems[coffeeAlreadyExistsInCart].quantity += action.payload.newCoffee.quantity
+          draft.cartItems[coffeeAlreadyExistsInCart].quantity +=
+            action.payload.newCoffee.quantity
         }
       })
-      
-      return newCartItemsState;
+      return newCartState
     }
+    default:
+      return state
   }
 }
