@@ -1,14 +1,12 @@
-import {
-  createContext,
-  ReactNode,
-  useEffect,
-  useReducer,
-  useState,
-} from 'react'
+import { createContext, ReactNode, useEffect, useReducer } from 'react'
 import { Coffee } from '../pages/Home/components/CoffeeCard'
-import { produce } from 'immer'
 import { cartReducer } from '../reducers/cart/reducer'
-import { ActionTypes, addCoffeeToCartAction } from '../reducers/cart/actions'
+import {
+  addCoffeeToCartAction,
+  changeCartItemQuantityAction,
+  cleanCartAction,
+  removeCartItemAction,
+} from '../reducers/cart/actions'
 
 /* ===== TYPE ===== */
 export interface CartItem extends Coffee {
@@ -55,14 +53,6 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     },
   )
 
-  // const [cartItems, setCartItems] = useState<CartItem[]>(() => {
-  //   const storedCartItems = localStorage.getItem(COFFEE_ITEMS_STORAGE_KEY)
-  //   if (storedCartItems) {
-  //     return JSON.parse(storedCartItems)
-  //   }
-  //   return []
-  // })
-
   const { cartItems } = cartState
 
   const cartQuantity = cartItems.length
@@ -74,17 +64,6 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   const deliveryPrice = 3.5 // fica a sua escolha
 
   function addCoffeeToCart(coffee: CartItem) {
-    // const coffeeAlreadyExistsInCart = cartItems.findIndex(
-    //   (cartItem) => cartItem.id === coffee.id,
-    // )
-    // const newCart = produce(cartItems, (draft) => {
-    //   if (coffeeAlreadyExistsInCart < 0) {
-    //     draft.push(coffee)
-    //   } else {
-    //     draft[coffeeAlreadyExistsInCart].quantity += coffee.quantity
-    //   }
-    // })
-    // setCartItems(newCart)
     dispatch(addCoffeeToCartAction(coffee))
   }
 
@@ -92,37 +71,15 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     cartItemId: string,
     type: 'increase' | 'decrease',
   ) {
-    const newCart = produce(cartItems, (draft) => {
-      const coffeeExistsInCart = cartItems.findIndex(
-        (cartItem) => cartItem.id === cartItemId,
-      )
-
-      if (coffeeExistsInCart >= 0) {
-        const item = draft[coffeeExistsInCart]
-        draft[coffeeExistsInCart].quantity =
-          type === 'increase' ? item.quantity + 1 : item.quantity - 1
-      }
-    })
-
-    // setCartItems(newCart)
+    dispatch(changeCartItemQuantityAction(cartItemId, type))
   }
 
   function removeCartItem(cartItemId: string) {
-    const newCart = produce(cartItems, (draft) => {
-      const coffeeExistsInCart = cartItems.findIndex(
-        (cartItem) => cartItem.id === cartItemId,
-      )
-
-      if (coffeeExistsInCart >= 0) {
-        draft.splice(coffeeExistsInCart, 1)
-      }
-    })
-
-    // setCartItems(newCart)
+    dispatch(removeCartItemAction(cartItemId))
   }
 
   function cleanCart() {
-    // setCartItems([])
+    dispatch(cleanCartAction())
   }
 
   useEffect(() => {
