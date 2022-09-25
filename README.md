@@ -42,7 +42,7 @@ O Coffee Delivery nada mais é que um carrinho de compras de café, contendo pá
 
 ## 💻 Deploy
 
-Clique no link a seguir para executar o projeto na sua máquina: <a target="_blank" href="https://ignite-timer-pearl.vercel.app/">Link</a>
+Clique no link a seguir para executar o projeto na sua máquina: <a target="_blank" href="https://coffee-delivery-topaz.vercel.app/">Link</a>
 
 
 ## 🚀 Technologies
