@@ -13,4 +13,6 @@ export const CoffeeList = styled.div`
   row-gap: 2.5rem;
   /* place-content: center; */
   margin-top: 3.5rem;
+
+  /* background: tomato; */
 `
