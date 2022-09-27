@@ -45,7 +45,9 @@ export function Intro() {
             />
           </S.BenefitsContainer>
         </div>
-        <img src={introImg} alt="" />
+        <figure>
+          <img src={introImg} alt="" />
+        </figure>
       </S.IntroContent>
     </S.IntroContainer>
   )
