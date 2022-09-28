@@ -8,6 +8,11 @@ export const InfoWithIconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+
+  & > p {
+    flex: 1;
+    text-align: left;
+  }
 `
 
 export const IconContainer = styled.div<IconContainerProps>`

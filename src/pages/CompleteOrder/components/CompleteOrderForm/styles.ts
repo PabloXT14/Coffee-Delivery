@@ -5,7 +5,9 @@ export const CompleteOrderFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 40rem;
+  max-width: 40rem;
+
+  /* background: tomato; */
 `
 
 export const FormSectionContainer = styled(SectionBaseStyle)`

@@ -6,6 +6,10 @@ export const CompleteOrderContainer = styled.form`
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+
+  @media (max-width: 1200px) {
+    /* flex-direction: column; */
+  }
 `
 
 export const SectionBaseStyle = styled.div`
