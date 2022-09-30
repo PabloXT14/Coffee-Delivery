@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const PaymentMethodInputContainer = styled.div`
   input {
+    display: block;
     visibility: hidden;
     appearance: none;
   }

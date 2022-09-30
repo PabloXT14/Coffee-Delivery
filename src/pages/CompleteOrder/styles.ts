@@ -7,8 +7,8 @@ export const CompleteOrderContainer = styled.form`
   justify-content: space-between;
   gap: 2rem;
 
-  @media (max-width: 1200px) {
-    /* flex-direction: column; */
+  @media (max-width: 900px) {
+    flex-direction: column;
   }
 `
 

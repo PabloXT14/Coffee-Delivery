@@ -8,6 +8,14 @@ export const SelectedCoffeesContainer = styled.div`
   width: 28rem;
 
   /* background: dodgerblue; */
+
+  @media (max-width: 1024px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const DetailsContainer = styled(SectionBaseStyle)`

@@ -38,7 +38,7 @@ export const InputStyleContainer = styled.div<InputStyleContainerProps>`
 `
 
 export const InputStyled = styled.input`
-  flex: 1;
+  width: 100%;
   height: 100%;
   background: none;
   border: none;
