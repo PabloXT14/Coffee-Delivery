@@ -29,7 +29,7 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
 
   return (
     <S.CoffeeCartCardContainer>
-      <div>
+      {/* <div>
         <img src={`/coffees/${coffee.photo}`} alt="" />
         <div>
           <RegularText color="subtitle">{coffee.name}</RegularText>
@@ -48,7 +48,26 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
         </div>
       </div>
 
-      <p>R$ {formattedPrice}</p>
+      <p>R$ {formattedPrice}</p> */}
+      <img src={`/coffees/${coffee.photo}`} alt="" />
+      <div className="description-container">
+        <div className="description-container-top">
+          <RegularText color="subtitle">{coffee.name}</RegularText>
+          <p className="price">R$ {formattedPrice}</p>
+        </div>
+        <S.ActionsContainer>
+          <QuantityInput
+            size="small"
+            quantity={coffee.quantity}
+            onIncrease={handleIncrease}
+            onDecrease={handleDecrease}
+          />
+          <S.RemoveButton onClick={handleRemove}>
+            <Trash size={16} />
+            REMOVER
+          </S.RemoveButton>
+        </S.ActionsContainer>
+      </div>
     </S.CoffeeCartCardContainer>
   )
 }

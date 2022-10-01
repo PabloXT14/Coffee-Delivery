@@ -20,7 +20,7 @@ const confirmOrderFormValidationSchema = zod.object({
   complement: zod.string(),
   district: zod.string().min(1, 'Informe o Bairro'),
   city: zod.string().min(1, 'Informe a Cidade'),
-  uf: zod.string().min(1, 'Informe a UF'),
+  uf: zod.string().min(1, 'Informe a UF').max(2, 'Só dois caracteres'),
   paymentMethod: zod.nativeEnum(PaymentMethods, {
     errorMap: () => {
       return { message: 'Informe o método de pagamento' }

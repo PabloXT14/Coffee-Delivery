@@ -17,4 +17,8 @@ export const SectionBaseStyle = styled.div`
   background: ${({ theme }) => theme.colors['base-card']};
   border-radius: 6px;
   padding: 2.5rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `

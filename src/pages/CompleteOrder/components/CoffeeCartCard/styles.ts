@@ -4,26 +4,38 @@ export const CoffeeCartCardContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 1.25rem;
 
   border-bottom: 1px solid ${({ theme }) => theme.colors['base-button']};
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 
-  & > div {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-
-    img {
-      width: 4rem;
-      height: 4rem;
-    }
+  img {
+    width: 4rem;
+    height: 4rem;
   }
 
-  & > p {
-    align-self: flex-start;
-    font-weight: 700;
+  & div.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  & div.description-container-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > p:first-child {
+      flex: 1;
+    }
+
+    p.price {
+      align-self: flex-start;
+      font-weight: 700;
+    }
   }
 `
 
@@ -33,6 +45,7 @@ export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 
   & > div {
     max-width: 4.5rem;

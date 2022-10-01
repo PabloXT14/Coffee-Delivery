@@ -19,7 +19,7 @@ export const FormSectionContainer = styled(SectionBaseStyle)`
 export const AddressFormContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0px, 12.5rem) minmax(0px, 17.5rem) minmax(
+  grid-template-columns: minmax(0px, 41.66%) minmax(0px, 58.33%) minmax(
       0px,
       3.75rem
     );

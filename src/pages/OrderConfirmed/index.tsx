@@ -79,7 +79,9 @@ export function OrderConfirmed() {
             }
           />
         </S.OrderDetailsContainer>
-        <img src={confirmedOrderIllustration} alt="" />
+        <figure>
+          <img src={confirmedOrderIllustration} alt="" />
+        </figure>
       </section>
     </S.OrderConfirmedContainer>
   )
