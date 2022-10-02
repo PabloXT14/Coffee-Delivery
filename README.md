@@ -35,10 +35,16 @@ O Coffee Delivery nada mais é que um carrinho de compras de café, contendo pá
     <img
         alt="Gif de demonstração do projeto" 
         title="Gif de demonstração do projeto" 
-        src="./.github/images/ignite_timer-demonstration.gif" 
+        src="./.github/gifs/coffee_delivery-demonstration-01.gif" 
     />
 </p>
-
+<p align="center">
+    <img
+        alt="Gif de demonstração do projeto" 
+        title="Gif de demonstração do projeto" 
+        src="./.github/gifs/coffee_delivery-demonstration-02.gif" 
+    />
+</p>
 
 ## 💻 Deploy
 
