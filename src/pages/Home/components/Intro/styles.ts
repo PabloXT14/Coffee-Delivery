@@ -30,6 +30,10 @@ export const IntroContent = styled.div`
   justify-content: space-between;
   gap: 3.5rem;
 
+  & > div {
+    flex: 1;
+  }
+
   figure {
     max-width: 30rem;
 
@@ -45,7 +49,6 @@ export const IntroContent = styled.div`
     & > div {
       display: flex;
       flex-direction: column;
-      flex: 1;
       align-items: center;
       text-align: center;
     }
