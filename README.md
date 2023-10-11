@@ -1,86 +1,101 @@
 <h1 align="center">
-    <img alt="Logo Ignite" title="Logo Ignite" src="./.github/images/logo-coffee-delivery.png" />
-    Coffee Delivery
+  <img
+    src="./.github/images/logo-coffee-delivery.png"
+    title="Logo Coffee Delivery"
+    alt="Logo Coffee Delivery"
+    width="30px"
+  />
+  Coffee Delivery
 </h1>
 
 <p align="center">
- <a href="#-demonstration">Demonstration</a> |
- <a href="#-deploy">Deploy</a> |
- <a href="#-technologies">Technologies</a> |
- <a href="#-layout">Layout</a> |
- <a href="#-clipboard-pré-requisitos">Clipboard</a> |
- <a href="#-settings">Settings</a>
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pabloxt14/Coffee-Delivery">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pabloxt14/Coffee-Delivery">
+  
+  <a href="https://github.com/pabloxt14/Coffee-Delivery/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pabloxt14/Coffee-Delivery">
+  </a>
+    
+   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
+
+   <a href="https://github.com/pabloxt14/Coffee-Delivery/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/pabloxt14/Coffee-Delivery?style=social">
+  </a>
 </p>
 
----
+<p>
+  <img src=".github/images/cover.png" alt="" />
+</p>
+
+<h4 align="center"> 
+	🚀 Aplicação finalizada 🚀
+</h4>
+
+<p align="center">
+ <a href="#-about">About</a> |
+ <a href="#-deploy">Deploy</a> |
+ <a href="#-layout">Layout</a> | 
+ <a href="#-how-it-works">How It Works</a> | 
+ <a href="#-technologies">Technologies</a> | 
+ <a href="#-author">Author</a> | 
+ <a href="#-license">License</a>
+</p>
+
+
+## 💻 About
 
 O Coffee Delivery nada mais é que um carrinho de compras de café, contendo página de opções e seleção de pedidos, página de finalização do pedido, e por fim uma página com as informações de entrega. Tudo nesta aplicação é salvo de forma local, ou seja, não está vendendo café de verdade hehe 😁.
 
-**Objetivos**: os principais objetivos desta aplicação foi treinar a atilização das seguintes ferramentas/tecnologias: 
+**Objetivos**: os principais objetivos desta aplicação foram treinar a utilização das seguintes ferramentas/tecnologias: 
   - Utilização de formulários com `React Hook Form`
   - Validação de formulário com a biblioteca `Zod`
   - Auteração de estados imutáveis de forma mutavel com a biblioteca `immer`
-  - Uso do hook `useReducer` do React para centralizar as alterações em um estado complexo
   - Outros...
 
 **Créditos**: está é uma aplicação foi desenvolvida como conclusão de um dos diversos desafios do treinamento Ignite da [Rocketseat](http://rocketseat.com.br/)
 
-* Caso goste do projeto marque a estrelinha⭐ e compartilhe para me ajudar 👍, e me siga para ver outros projetos meus.
+Caso goste do projeto marque a estrelinha⭐ e compartilhe para me ajudar 👍, e me siga para ver outros projetos meus.
 
-## 📷 Demonstration
-<p align="center">
-    <img alt="Capa do projeto" title="Capa do projeto" src="./.github/images/cover.png" />
-</p>
-<p align="center">
-    <img
-        alt="Gif de demonstração do projeto" 
-        title="Gif de demonstração do projeto" 
-        src="./.github/gifs/coffee_delivery-demonstration-01.gif" 
-    />
-</p>
-<p align="center">
-    <img
-        alt="Gif de demonstração do projeto" 
-        title="Gif de demonstração do projeto" 
-        src="./.github/gifs/coffee_delivery-demonstration-02.gif" 
-    />
-</p>
+---
 
-## 💻 Deploy
+## 🔗 Deploy
 
-Clique no link a seguir para executar o projeto na sua máquina: <a target="_blank" href="https://coffee-delivery-topaz.vercel.app/">Link</a>
+O deploy da aplicação pode ser acessada através da seguinte URL base: https://coffee-delivery-topaz.vercel.app/
 
-
-## 🚀 Technologies
-
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-✔ [Vite](https://vitejs.dev/)
-<br/>
-✔ [ReactJS](https://reactjs.org/)
-<br/>
-✔ [TypeScript](https://www.typescriptlang.org/)
-<br/>
-✔ [Styled Components](https://styled-components.com/docs)
-<br/>
-✔ [Phosphor Icons](https://phosphoricons.com/)
-<br/>
-✔ [React Hook Form](https://react-hook-form.com/)
-<br/>
-✔ [Zod](https://github.com/colinhacks/zod)
-<br/>
-✔ [React Router](https://reactrouter.com/en/v6.3.0/getting-started/overview)
-<br/>
-✔ [Immer](https://github.com/immerjs/immer)
-<br/>
-✔ [Polished](https://polished.js.org/)
-<br/>
+---
 
 ## 🎨 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate). É necessário ter conta no [Figma](https://www.figma.com/) para acessá-lo.
 
-## 📋 Clipboard (Pré-requisitos)
+Veja uma demonstração visual das principais telas da aplicação:
+
+### FullScreen
+
+<p align="center">
+  <img
+      src="./.github/gifs/coffee_delivery-demonstration-01.gif" 
+      alt="Gif de demonstração do projeto" 
+      title="Gif de demonstração do projeto" 
+  />
+</p>
+
+### Mobile
+
+<p align="center">
+  <img
+    src="./.github/gifs/coffee_delivery-demonstration-02.gif" 
+    alt="Gif de demonstração do projeto" 
+    title="Gif de demonstração do projeto" 
+  />
+</p>
+
+---
+
+## 🚀 How it works
+
+### Pré-requisitos
 
 Antes de baixar o projeto você vai precisar ter instalado na sua máquina as seguintes ferramentas:
 
@@ -88,37 +103,61 @@ Antes de baixar o projeto você vai precisar ter instalado na sua máquina as se
 * [NodeJS](https://nodejs.org/en/)
 * [Yarn](https://yarnpkg.com/) ou [NPM](https://www.npmjs.com/)
 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## ⚙ Settings
+### Clonando e Executando
 
-Segue os comandos para baixar e executar o projeto na sua máquina:
+Passo a passo para clonar e executar a aplicação na sua máquina:
 
-* `git clone` + `URL do Projeto`: clonar este repositório.
-* `cd Coffee-Delivery`: acessa a pasta do projeto no terminal.
-* `npm i`: para baixar as dependências do projeto.
-* `npm run dev`: 
-    - Executa o projeto em modo/ambiente de desenvolvimento.
-    - Abra [http://localhost:3000](http://localhost:3000) para ver o projeto rodando no Navegador.
-    - A página será recarregada se você fizer edições no código, e se tiver algum erro será mostrado no console.
-* `npm run build`: 
-    - Compila a aplicação para a produção na pasta `build`.
+```bash
+# Clone este repositório
+$ git clone git@github.com:pabloxt14/Coffee-Delivery.git
 
+# Acesse a pasta do projeto no terminal
+$ cd Coffee-Delivery
 
-## 📝 License
+# Instale as dependências
+$ npm install
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# A aplicação inciará em alguma porta disponível que poderá ser acessada pelo navegador
+```
+
+---
+
+## 🛠 Technologies
+
+As seguintes principais ferramentas foram usadas na construção do projeto:
+
+- **[Vite](https://vitejs.dev/)**
+- **[ReactJS](https://reactjs.org/)**
+- **[TypeScript](https://www.typescriptlang.org/)**
+- **[Styled Components](https://styled-components.com/docs)**
+- **[Phosphor Icons](https://phosphoricons.com/)**
+- **[React Hook Form](https://react-hook-form.com/)**
+- **[Zod](https://github.com/colinhacks/zod)**
+- **[React Router](https://reactrouter.com/en/v6.3.0/getting-started/overview)**
+- **[Immer](https://github.com/immerjs/immer)**
+- **[Polished](https://polished.js.org/)**
+
+> Para mais detalhes das dependências gerais da aplicação veja o arquivo [package.json](./package.json)
+
+---
 
 ## ✍ Author
 
-<img alt="PabloXT14" title="PabloXT14" src="https://github.com/PabloXT14.png" width="100">
-<p>
-    Made with 💜 by PabloXT14
-</p>
-<p align="left">
-    <a href="https://www.linkedin.com/in/pabloalan/" target="_blank">
-        <img align="center" src="https://img.shields.io/badge/LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Pablo Alan" />
-    </a>
-    <a href="mailto:pabloxt14@gmail.com" target="_blank">
-        <img align="center" src="https://img.shields.io/badge/Gmail-FF0000?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Pablo Alan" />
-    </a>
-</p>
+<img alt="Perfil Github" title="Perfil Github" src="https://github.com/PabloXT14.png" width="100px" />
+
+[![Linkedin Badge](https://img.shields.io/badge/-Pablo_Alan-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pabloalan/)](https://www.linkedin.com/in/pabloalan/)
+
+[![Gmail Badge](https://img.shields.io/badge/-pabloxt14@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pabloxt14@gmail.com)](mailto:pabloxt14@gmail.com)
+
+---
+
+## 📝 License
+
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais informações
+
+Feito com 💜 por Pablo Alan 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pabloalan/)
