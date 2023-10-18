@@ -11,6 +11,8 @@
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pabloxt14/Coffee-Delivery">
 
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/pabloxt14/Coffee-Delivery" />
+
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/pabloxt14/Coffee-Delivery">
   
   <a href="https://github.com/pabloxt14/Coffee-Delivery/commits/master">
@@ -142,7 +144,7 @@ As seguintes principais ferramentas foram usadas na construção do projeto:
 - **[Immer](https://github.com/immerjs/immer)**
 - **[Polished](https://polished.js.org/)**
 
-> Para mais detalhes das dependências gerais da aplicação veja o arquivo [package.json](./package.json)
+> Para mais detalhes das dependências gerais da aplicação veja o arquivo [package.json](https://github.com/PabloXT14/Coffee-Delivery/blob/main/package.json)
 
 ---
 
