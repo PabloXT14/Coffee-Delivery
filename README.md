@@ -144,7 +144,7 @@ As seguintes principais ferramentas foram usadas na construção do projeto:
 - **[Immer](https://github.com/immerjs/immer)**
 - **[Polished](https://polished.js.org/)**
 
-> Para mais detalhes das dependências gerais da aplicação veja o arquivo [package.json](https://github.com/PabloXT14/Coffee-Delivery/blob/main/package.json)
+> Para mais detalhes das dependências gerais da aplicação veja o arquivo [package.json](./package.json)
 
 ---
 
